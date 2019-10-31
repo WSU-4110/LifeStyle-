@@ -1,5 +1,4 @@
 https://ropsten.etherscan.io/token/0x73b2f452541379e6261377580078fd7441622289
-
 pragma solidity ^0.5.00;
 
 // ----------------------------------------------------------------------------
@@ -16,6 +15,9 @@ pragma solidity ^0.5.00;
 
 // ----------------------------------------------------------------------------
 // Safe maths
+//This prevents unsigned integer overflow issue.
+//Ethereum Virtual Machine (EVM) itself doesn't do anything if you add two integers together that together exceed the max integer value (2^256-1).
+//Instead, the summed integer will overflow and sum calculation result will be incorrect.
 // ----------------------------------------------------------------------------
 contract SafeMath {
     function safeAdd(uint a, uint b) public pure returns (uint c) {
@@ -40,6 +42,9 @@ contract SafeMath {
 // ----------------------------------------------------------------------------
 // ERC Token Standard #20 Interface
 // https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20-token-standard.md
+//The following standard allows for the implementation of a standard API for tokens within smart contracts.
+//This standard provides basic functionality to transfer tokens, as well as allow tokens to be approved so 
+//they can be spent by another on-chain third party.
 // ----------------------------------------------------------------------------
 contract ERC20Interface {
     function totalSupply() public view returns (uint);
@@ -56,8 +61,6 @@ contract ERC20Interface {
 
 // ----------------------------------------------------------------------------
 // Contract function to receive approval and execute function in one call
-//
-// Borrowed from MiniMeToken
 // ----------------------------------------------------------------------------
 contract ApproveAndCallFallBack {
     function receiveApproval(address from, uint256 tokens, address token, bytes memory data) public;
