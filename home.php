@@ -24,6 +24,7 @@ $conn = connect();
     <div class="container">
         <?php include 'includes/navbar.php'; ?>
         <br>
+        //Implemented createpost in order to create posts and alter created user's informations
         <div class="createpost">
             <form method="post" action="" onsubmit="return validatePost()" enctype="multipart/form-data">
                 <h2>Make Post</h2>
