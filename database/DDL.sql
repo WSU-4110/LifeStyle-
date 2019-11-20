@@ -1,4 +1,4 @@
-DROP DATABASE socialnetwork;
+DROP DATABASE IF EXISTS socialnetwork;
 CREATE DATABASE socialnetwork;
 
 CREATE TABLE users (

@@ -22,27 +22,27 @@ class Creator implements SplSubject{
 	
 	public function attach(SplObserver $observer){
 		//Attach an SplObserver
-		$this->$observers[]	=	$observer;
+		$this->observers[]	=	$observer;
 	}
 	
 	public function detach(SplObserver $observer){
 		//Detach an observer
 		 $key	=	array_search($observer,$this->$observers, true);
         if($key){
-            unset($this->$observers[$key]);
+            unset($this->observers[$key]);
 		}
 	}
 	
 	public function notify(){
 		//Notify an observer
-		foreach ($this->$observers as $subs) {
-            $subs->$update($this);
+		foreach ($this->observers as $subs) {
+            $subs->update($this);
 		}
 	}
 	
 	public function getContent(){
 		//returns content for subs
-		return $this->$content;
+		return $this->content;
 	}
 	
 	

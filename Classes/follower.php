@@ -17,7 +17,7 @@ class Follower implements SplObserver{
 	}
 	//Update 
 	public function update(SplSubject $publisher){
-		return $publisher->$getContent();
+		return $publisher->getContent();
 	}
 }
 
