@@ -1,0 +1,30 @@
+<?php
+declare(strict_types=1);
+
+use PHPUnit\Framework\TestCase;
+
+final class SearchTest extends TestCase
+{
+    public function testCanBeCreatedFromValidSearch (): void
+    {
+        $this->assertInstanceOf(
+            Search::class,
+            Search::fromString(“FirstName,LastName’)
+        );
+    }
+
+    public function testCannotBeCreatedFromSearch(): void
+    {
+        $this->expectException(InvalidArgumentException::class);
+
+        Search::fromString('invalid');
+    }
+
+    public function testCanBeUsedAsString(): void
+    {
+        $this->assertEquals(
+            ‘FirstName,LastName’,
+            Search::fromString(FirstName,LastName)
+        );
+    }
+}
