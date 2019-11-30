@@ -1,6 +1,4 @@
-/* methods being tested are creating with a caption,
- empty value in a caption, valid email address,
-  invalid email address, and passwords */
+
 <?php
 
 declare(strict_types=1);
