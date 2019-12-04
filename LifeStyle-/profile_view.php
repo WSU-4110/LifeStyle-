@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
-<link href="profile.css" rel="stylesheet" type="text/css">
-<script src="profile_scripts.js"></script>
+<link href="resources/css/profile.css" rel="stylesheet" type="text/css">
+<script src="resources/js/profile_scripts.js"></script>
 <header>
 
 	<div class="container">

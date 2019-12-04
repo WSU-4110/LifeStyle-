@@ -113,7 +113,6 @@ $conn = connect();
                 reader.readAsDataURL(input.files[0]);
             }
         }
-        
         // Form Validation
         function validatePost(){
             var required = document.getElementsByClassName("required");
