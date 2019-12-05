@@ -1,6 +1,7 @@
-DROP DATABASE socialnetwork;
+DROP DATABASE IF EXISTS socialnetwork;
 CREATE DATABASE socialnetwork;
 
+use socialnetwork;
 CREATE TABLE users (
 user_id             INT NOT NULL AUTO_INCREMENT,
 user_firstname      VARCHAR(20) NOT NULL,  
@@ -30,6 +31,7 @@ post_caption        TEXT NOT NULL,
 post_time           TIMESTAMP NOT NULL, 
 post_public         CHAR(1) NOT NULL,
 post_by             INT NOT NULL,
+post_media			boolean DEFAULT '0',
 PRIMARY KEY (post_id),
 FOREIGN KEY (post_by) REFERENCES users(user_id)
 );
@@ -38,4 +40,10 @@ CREATE TABLE user_phone (
 user_id         INT,
 user_phone      INT,
 FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+CREATE TABLE media(
+media_post		INT NOT NULL,
+media_hash		varchar(50) NOT NULL,
+media_url		varchar(50) NOT NULL,
+FOREIGN KEY (media_post) REFERENCES posts(post_id)
 );

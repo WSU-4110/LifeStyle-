@@ -213,7 +213,7 @@ function validateNumber(){
 }
 </script>
 </html>
-<?php include 'functions/upload.php'; ?>
+<?php include 'functions/imgurUpload.php'; ?>
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') { // A form is posted
