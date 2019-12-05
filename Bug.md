@@ -23,4 +23,6 @@ be saved anywhere (fixed)
 have accepted your friend request would not appear (fixed)
 
 8) Bug after sending friend request -- error message appears after sending friend request 
-(Friend request still processes on both ends)
+(Fixed)
+
+9) Phone Number Values -- Phone number values exceed database storage type size (10 digit numbers)
