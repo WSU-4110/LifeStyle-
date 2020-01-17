@@ -4,7 +4,7 @@ pragma solidity ^0.5.00;
 // ----------------------------------------------------------------------------
 // 'LIFE' token contract
 //
-// Deployed to : 0xFEB02D9383C49A8373F88e82EbCecB553c1837bf
+// Deployed to : 0x73b2f452541379e6261377580078fd7441622289
 // Symbol      : LIFE
 // Name        : LIFE
 // Total supply: 100000000
@@ -12,6 +12,8 @@ pragma solidity ^0.5.00;
 //
 // ----------------------------------------------------------------------------
 
+// Sunny's Account Address 0x6181777775b9D8E0A52Ed567E5b0C5e50a0b816E
+// Shojib's Account Address 0x0046bcb202b74C3543d12974ad60763cb4FD950D
 
 // ----------------------------------------------------------------------------
 // Safe maths
